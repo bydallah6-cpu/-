@@ -1,18 +1,38 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bydallah6.myapp" version="1.0.0" xmlns="http://cordova.apache.org/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>التفقد لحلقات القرآن</name> 
+<widget id="com.bydallah6.myapp" version="1.0.0" xmlns="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     
-    <description>وصف مختصر للتطبيق</description>
+    <name> التفقد في المساجد</name> 
     
+    <description>تطبيق ويب متكامل ومميز</description>
     <content src="index.html" />
     
     <icon src="icon.png" />
     <splash src="splash.png" />
 
-    <preference name="SplashScreenDelay" value="3000" /> <preference name="AutoHideSplashScreen" value="true" />
+    <allow-intent href="whatsapp:*" />
+    <allow-intent href="https://wa.me/*" />
+    <allow-intent href="https://api.whatsapp.com/*" />
+    <allow-navigation href="https://wa.me/*" />
+    <allow-navigation href="https://api.whatsapp.com/*" />
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <queries>
+                <package android:name="com.whatsapp" />
+            </queries>
+        </config-file>
+    </platform>
+
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
     <preference name="FadeSplashScreen" value="true" />
     <preference name="FadeSplashScreenDuration" value="500" />
-
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="icon.png" />
-    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" /> </widget>
-
+    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+</widget>
