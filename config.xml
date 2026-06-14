@@ -1,13 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bydallah6.myapp" version="1.0.0" xmlns="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.bydallah6.myapp" version="1.0.0" xmlns="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     
-    <name> التفقد في المساجد</name> 
+    <name>تطبيقي الجديد</name> 
     
     <description>تطبيق ويب متكامل ومميز</description>
     <content src="index.html" />
     
     <icon src="icon.png" />
     <splash src="splash.png" />
+
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
 
     <allow-intent href="whatsapp:*" />
     <allow-intent href="https://wa.me/*" />
@@ -16,6 +21,10 @@
     <allow-navigation href="https://api.whatsapp.com/*" />
 
     <platform name="android">
+        
+        <allow-navigation href="https://wa.me/*" />
+        <allow-navigation href="https://api.whatsapp.com/*" />
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.CAMERA" />
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -27,12 +36,11 @@
                 <package android:name="com.whatsapp" />
             </queries>
         </config-file>
+        
     </platform>
 
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="FadeSplashScreen" value="true" />
     <preference name="FadeSplashScreenDuration" value="500" />
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="icon.png" />
-    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
 </widget>
