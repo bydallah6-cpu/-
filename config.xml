@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.bydallah6.myapp" version="1.0.0" xmlns="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     
-    <name>تطبيقي الجديد</name> 
+    <name>أيها المربي</name> 
     
     <description>تطبيق ويب متكامل ومميز</description>
     <content src="index.html" />
